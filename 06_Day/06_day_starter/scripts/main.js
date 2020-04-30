@@ -1,7 +1,7 @@
 
 console.log('Open the console and check if the countries has been loaded')
 
-console.log("thong thong 555")
+console.log("thong thong from thailand")
 //homework day6
 
 const countries2 = [
@@ -121,14 +121,140 @@ for (var c = 0; c <= loop; c++) {
 console.log("-----------------------------")
 
 //7. Use for loop to iterate from 0 to 100 and print only even numbers
-function isEven(number) {
-  if (number % 2 === 0)
-    return number
+function isEven(even) {
+  if (even % 2 === 0)
+    return even
   else return 0
 }
 console.log(isEven(10))
 var loop2 = 100;
-for (var d = 0; d <= loop2;d++) {
-  if(isEven(d))
-  console.log(isEven(d))
+for (var d = 0; d <= loop2; d++) {
+  if (isEven(d))
+    console.log(isEven(d))
 }
+console.log("-----------------------------")
+
+//8. Use for loop to iterate from 0 to 100 and print only odd numbers
+
+function isOdd(odd) {
+  if (odd % 2 === 1)
+    return odd
+  else return 0
+}
+
+for (var o = 0; o <= loop2; o++) {
+  if (isOdd(o))
+    console.log(isOdd(o))
+}
+console.log("-----------------------------")
+
+
+//9. Use for loop to iterate from 0 to 100 and print only prime numbers
+function test_prime(n) {
+  if (n === 1) {
+    return false;
+  }
+  else if (n === 2) {
+    return true;
+  } else {
+    for (var x = 2; x < n; x++) {
+      if (n % x === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+for (var thong = 0; thong <= loop2; thong++) {
+  if (test_prime(thong) == true)
+    console.log(thong)
+}
+console.log("-----------------------------")
+
+/*10. Use for loop to iterate from 0 to 100 and print and print the sum of all numbers.
+
+```sh
+The sum all numbers is 5050.
+```
+*/
+let sum = 0
+
+for (var e = 0; e <= 150; e++) {
+  sum += e
+  if (e == 150)
+    console.log("The sum all numbers is " + sum)
+}
+
+console.log("-----------------------------")
+/*11. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
+    ```sh
+    The sum of all evens is 2550. And the sum of all odds is 2500.
+    ```
+*/
+var sumOdd = 0
+for (var o = 0; o <= loop2; o++) {
+  if (isOdd(o)) {
+    sumOdd += o
+  }
+}
+console.log(sumOdd)
+
+var sumEven = 0
+for (var s = 0; s <= loop2; s++) {
+  if (isEven(s)) {
+    sumEven += s
+  }
+}
+console.log(sumEven)
+console.log("--------------------------")
+
+/*12. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+
+    ```sh
+      [2550, 2500]
+*/
+var sumEvenOdd = [sumEven, sumOdd]
+console.log(sumEvenOdd)
+console.log("--------------------------")
+
+//13. Develop a small script which generate array of 5 random numbers
+/*
+var randomArr = []
+var random1 = 0
+for (var b = 0; b < 5; b++) {
+  random1 = Math.round(Math.random() * 100)
+
+  randomArr.push(random1)
+}
+console.log(randomArr)
+*/
+console.log("--------------------------")
+/*
+//14. Develop a small script which generate array of 5 random numbers and the numbers must be unique
+var randomArr = []
+var random1 = 0
+var count = 0
+
+for (var b = 0; (b <= count) && (count<5) ; b++) 
+{
+  console.log(randomArr.length)
+  
+  for (var r = 0; r <= b; r++)
+  {
+    random1 = Math.round(Math.random()*10)
+    if (!(randomArr.includes(random1))) 
+    {
+      randomArr.push(random1)
+      count = randomArr.length
+    }
+    
+  }
+}
+console.log(randomArr)
+
+
+for (var oo in randomArr) {
+  console.log(oo)
+}
+*/
